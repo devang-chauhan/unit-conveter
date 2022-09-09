@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Scoreboard</title>
+        <title>Unit Converter</title>
         <link rel="icon" type="image/png" href="images/favicon.png" />
         <link rel="stylesheet" href="css/style.css">
         <script src="js/main.js" defer></script>
@@ -18,7 +18,31 @@
         </script>
     </head>
 
-    <body>
-       
-    </body>
+  <body>
+    <div id="gradient" class="text-center">
+      <p id="heading">Metric/Imperial unit conversion</p>
+      <ul class="list-input">
+		<li>
+		<button name="subject" type="submit" value="reset" onclick="reset()">Reset</button>
+		</li>
+        <li>
+          <input type="number" name="enter" id="number" placeholder="20" />
+        </li>
+        <li>
+          <button name="subject" type="submit" value="convert" onclick="convert()">Convert</button>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <p class="unit">Length (Meter/feet)</p>
+      <p id="length" class="conversion"></p>
+
+      <p class="unit">volume (Litres/Gallons)</p>
+      <p id="volume" class="conversion"></p>
+
+      <p class="unit">Mass (Kilograms/Pounds)</p>
+      <p id="mass" class="conversion"></p>
+    </div>
+    
+  </body>
 </html>
