@@ -6,6 +6,9 @@
         <title>Unit Converter</title>
         <link rel="icon" type="image/png" href="images/favicon.png" />
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <script src="js/main.js" defer></script>
         <!-- Google tag (gtag.js) -->
         <script async
@@ -19,30 +22,28 @@
     </head>
 
   <body>
-    <div id="gradient" class="text-center">
-      <p id="heading">Metric/Imperial unit conversion</p>
-      <ul class="list-input">
-		<li>
-		<button name="subject" type="submit" value="reset" onclick="reset()">Reset</button>
-		</li>
-        <li>
-          <input type="number" name="enter" id="number" placeholder="20" />
-        </li>
-        <li>
-          <button name="subject" type="submit" value="convert" onclick="convert()">Convert</button>
-        </li>
-      </ul>
+    <div class="container">
+      <header class="pad">
+        <p>Metric/Imperial Unit Conversion</p>
+        <div class="input">
+          <input class="width" type="text" id="number" value="1">
+          <button id="convert" class="width">Convert</button>
+        </div>
+      </header>
+      <main class="pad">
+        <div>
+          <p class="title">Length (Meter/Feet)</p>
+          <p class="output">Out</p>
+        </div>
+        <div>
+          <p class="title">Volume (Litres/Gallons)</p>
+          <p class="output">Out</p>
+        </div>
+        <div>
+          <p class="title">Mass (kilograms/Pounds)</p>
+          <p class="output">Out</p>
+        </div>
+      </main>
     </div>
-    <div class="text-center">
-      <p class="unit">Length (Meter/feet)</p>
-      <p id="length" class="conversion"></p>
-
-      <p class="unit">volume (Litres/Gallons)</p>
-      <p id="volume" class="conversion"></p>
-
-      <p class="unit">Mass (Kilograms/Pounds)</p>
-      <p id="mass" class="conversion"></p>
-    </div>
-    
   </body>
 </html>
